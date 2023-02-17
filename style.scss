@@ -105,10 +105,10 @@ body {
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
-    }
 
-    a:hover {
-        color: $color-orange-highlight;
+        &:hover {
+            color: $color-orange-highlight;
+        }
     }
 }
 
@@ -211,10 +211,10 @@ body {
             height: 100%;
         }
     }
-}
 
-.post-card:hover {
-    box-shadow: $shadow-black-hover;
+    &:hover {
+        box-shadow: $shadow-black-hover;
+    }
 }
 
 .post-info {
@@ -286,10 +286,10 @@ body {
             width: 622px;
         }
     }
-}
 
-.big-post-card:hover {
-    box-shadow: $shadow-black-hover
+    &:hover {
+        box-shadow: $shadow-black-hover;
+    }
 }
 
 .pagination-container {
@@ -477,10 +477,10 @@ body {
         font-size: 18px;
         line-height: 26px;
     }
-}
 
-.featured-post-card:hover {
-    box-shadow: $shadow-black-hover;
+    &:hover {
+        box-shadow: $shadow-black-hover;
+    }
 }
 
 .categories-container {
@@ -500,15 +500,15 @@ body {
         color: $color-gray-secondary;
         border-bottom: $border-style-gray;
         cursor: pointer;
+
+        &:hover {
+            color: $color-black-primary;
+            font-size: 16px;
+        }
     }
 
     .category:last-of-type {
         border-bottom: none;
-    }
-
-    .category:hover {
-        color: $color-black-primary;
-        font-size: 16px;
     }
 }
 
@@ -562,12 +562,12 @@ body {
         line-height: 18px;
         color: $color-gray-secondary;
         cursor: pointer;
-    }
 
-    .tag:hover {
-        background-color: $color-orange-highlight;
-        color: $color-black-primary;
-        cursor: pointer;
+        &:hover {
+            background-color: $color-orange-highlight;
+            color: $color-black-primary;
+            cursor: pointer;
+        }
     }
 }
 
@@ -619,7 +619,7 @@ body {
     @include flexBox(center, center);
     gap: 20px;
 
-    [class^=social-media] {
+    .social-media {
         width: 34px;
         height: 34px;
         border-radius: 50%;
@@ -627,37 +627,23 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 15px;
+
+        &:hover {
+            background-color: $color-orange-highlight;
+        }
+    }
+}
+
+.social-media {
+    @include flexBox(center, center);
+
+    &:hover {
+        svg {
+            fill: #FFFFFF
+        }
     }
 
-    [class^=social-media]:hover {
-        background-color: $color-orange-highlight;
+    svg {
+        height: 15px;
     }
-}
-
-.social-media-1{
-    background-image: url(./img/media-icons/fb-logo.svg);
-}
-
-.social-media-2{
-    background-image: url(./img/media-icons/twitter-logo.svg);
-}
-
-.social-media-3{
-    background-image: url(./img/media-icons/pinterest-logo.svg);
-}
-
-.social-media-4{
-    background-image: url(./img/media-icons/google-logo.svg);
-}
-
-.social-media-5{
-    background-image: url(./img/media-icons/behance-logo.svg);
-}
-
-.social-media-5:hover{
-    background-image: url(./img/media-icons/behance-logo-white.svg);
-}
-
-.social-media-6{
-    background-image: url(./img/media-icons/inst-logo.svg);
 }
