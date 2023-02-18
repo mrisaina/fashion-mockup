@@ -315,6 +315,15 @@ body {
   cursor: pointer;
 }
 
+.validation-pagination {
+  display: none;
+  text-align: center;
+  padding-top: 5px;
+  color: red;
+  font-size: 14px;
+  text-shadow: 0 0 1px #171717;
+}
+
 .posts-options {
   width: 270px;
 }
@@ -510,10 +519,9 @@ body {
   color: #666666;
   cursor: pointer;
 }
-.tags-list .tag:hover {
+.tags-list .tag:hover, .tags-list .tag .selected-tag {
   background-color: #C9A96E;
   color: #171717;
-  cursor: pointer;
 }
 
 .follow-text {
@@ -588,4 +596,8 @@ body {
 }
 .social-media svg {
   height: 15px;
+}
+
+.show {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

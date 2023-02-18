@@ -360,6 +360,15 @@ body {
     }
 }
 
+.validation-pagination {
+    display: none;
+    text-align: center;
+    padding-top: 5px;
+    color: red;
+    font-size: 14px;
+    text-shadow: 0 0 1px $color-black-primary;
+}
+
 .posts-options {
     width: 270px;
 }
@@ -563,10 +572,9 @@ body {
         color: $color-gray-secondary;
         cursor: pointer;
 
-        &:hover {
+        &:hover, .selected-tag {
             background-color: $color-orange-highlight;
             color: $color-black-primary;
-            cursor: pointer;
         }
     }
 }
@@ -646,4 +654,8 @@ body {
     svg {
         height: 15px;
     }
+}
+
+.show {
+    display: block;
 }
